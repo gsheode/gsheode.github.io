@@ -3,6 +3,8 @@ import { useGeoLocationData } from "./hooks.tsx";
 import './LandingPage.scss';
 import headerImage from '../images/pattern-bg-desktop.png';
 import arrowImage from '../images/icon-arrow.svg';
+import "leaflet/dist/leaflet.css";
+import LeafletMap from './LeafletMap.tsx';
 
 const LandingPage = () => {
     const [triggerSearch, setTriggerSearch] = useState(false);
@@ -24,7 +26,9 @@ const LandingPage = () => {
                         <img src={arrowImage} alt="Arrow image" />
                     </button>
                 </div>
+
             </div>
+            <LeafletMap />
         </>
     );
 }
