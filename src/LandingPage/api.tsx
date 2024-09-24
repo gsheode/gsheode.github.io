@@ -24,12 +24,12 @@ export interface GeoLocationResponse {
     isp: string;
 }
 
-export const getGeoLocation = async (): Promise<GeoLocationResponse> => {
+export const getGeoLocation = async ({ formValue }): Promise<GeoLocationResponse> => {
     try {
-        const res: AxiosResponse<GeoLocationResponse> = await axios.get('https://geo.ipify.org/api/v2/country', {
+        const res: AxiosResponse<GeoLocationResponse> = await axios.get('https://geo.ipify.org/api/v2/country,city', {
             params: {
                 apiKey: 'at_x9FJNySec36fHSMVIi4zOgWXIXgXG',
-                ipAddress: '8.8.8.8'
+                ipAddress: formValue,
             }
         });
         return res.data;
