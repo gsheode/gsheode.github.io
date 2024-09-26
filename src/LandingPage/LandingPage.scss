@@ -1,12 +1,91 @@
 .landing-page-container {
     display: flex;
     flex-direction: column;
+
 }
 
 .image-column {
     flex: 1;
 }
 
+.header-image {
+    position: relative;
+    text-align: center;
+}
+
+.input-field {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2.5rem;
+    border-radius: 25px;
+
+    input {
+        width: 20rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    button {
+        background-color: black;
+        border-color: none;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    img {
+        color: black;
+    }
+
+}
+
+.information-banner-container {
+    padding: 2rem;
+    background-color: white;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    width: max-content;
+    box-shadow: -0.1em 0 .4em gray;
+}
+
+.information-banner-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 3rem 0rem 1rem;
+    border-right: 1px solid #dae1ed;
+    text-align: left;
+    max-width: 12rem;
+
+}
+
+.information-banner-column:last-child {
+    border: none;
+}
+
+.information-banner-header {
+    font-weight: 700;
+    font-size: small;
+    color: #abbad4;
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+}
+
+.information-banner-info {
+    font-size: medium;
+    color: black;
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+}
+
 #map {
     height: 180px;
+    position: relative;
 }

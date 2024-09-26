@@ -17,20 +17,27 @@ const LandingPage = () => {
     const handleInputChange = (ev) => {
         setSearchValue(ev.target.value)
     }
+
+    const handleEnter = (e) => {
+        if (e.key === 'Enter')
+            handleSearch();
+    }
     return (
         <>
             <div className='landing-page-container'>
                 <div className="image-column">
-                    <div className='header-image'>
+                    <div className='header-image '>
                         <img src={headerImage} alt={'headerImage'}></img>
+                        <div className="input-field">
+                            <input type='search' onKeyDown={handleEnter} onChange={handleInputChange} placeholder="Search for any IP address or domain"  ></input>
+                            <button onClick={handleSearch}>
+                                <img src={arrowImage} alt="Arrow image" />
+                            </button>
+                        </div>
                     </div>
 
-                    <input type='search' onChange={handleInputChange}  ></input>
-                    <button onClick={handleSearch}>
-                        <img src={arrowImage} alt="Arrow image" />
-                    </button>
                 </div>
-                <InformationBanner data={data} />
+                {data && <InformationBanner data={data} />}
 
             </div>
             <LeafletMap data={data} />
