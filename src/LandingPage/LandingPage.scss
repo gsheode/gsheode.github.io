@@ -1,6 +1,7 @@
 .landing-page-container {
     display: flex;
     flex-direction: column;
+    position: relative;
 
 }
 
@@ -12,6 +13,7 @@
     position: relative;
     text-align: center;
 }
+
 
 .input-field {
     display: flex;
@@ -47,9 +49,8 @@
     padding: 2rem;
     background-color: white;
     position: absolute;
-    top: 26%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 80%;
+    left: 25%;
     z-index: 1;
     display: flex;
     flex-direction: row;

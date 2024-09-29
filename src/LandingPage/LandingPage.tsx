@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGeoLocationData } from "./hooks.tsx";
 import './LandingPage.scss';
 import headerImage from '../images/pattern-bg-desktop.png';
@@ -8,32 +8,35 @@ import LeafletMap from "./LeafletMap.tsx";
 import { InformationBanner } from "./InformationBanner.tsx";
 
 const LandingPage = () => {
-    const [triggerSearch, setTriggerSearch] = useState(false);
     const [searchValue, setSearchValue] = useState('');
-    const { data } = useGeoLocationData({ enabled: triggerSearch, formValue: searchValue })
-    const handleSearch = () => {
-        setTriggerSearch(true);
-    }
-    const handleInputChange = (ev) => {
-        setSearchValue(ev.target.value)
+    const { data } = useGeoLocationData({ formValue: searchValue })
+    const inputRef = useRef<HTMLInputElement | null>(null);
+
+    const handleSearch = (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        // const ipAddress = formData.get('ipAddress') as string;
+        const ipAddress = inputRef.current?.value;
+        setSearchValue(ipAddress as string);
+        if (inputRef.current)
+            inputRef.current.value = '';
     }
 
-    const handleEnter = (e) => {
-        if (e.key === 'Enter')
-            handleSearch();
-    }
+
     return (
         <>
             <div className='landing-page-container'>
                 <div className="image-column">
                     <div className='header-image '>
                         <img src={headerImage} alt={'headerImage'}></img>
-                        <div className="input-field">
-                            <input type='search' onKeyDown={handleEnter} onChange={handleInputChange} placeholder="Search for any IP address or domain"  ></input>
-                            <button onClick={handleSearch}>
+                        <form onSubmit={handleSearch} className="input-field">
+                            <input name="ipAddress"
+                                ref={inputRef}
+                                placeholder="Search for any IP address or domain"  ></input>
+                            <button type="submit" >
                                 <img src={arrowImage} alt="Arrow image" />
                             </button>
-                        </div>
+                        </form>
                     </div>
 
                 </div>
