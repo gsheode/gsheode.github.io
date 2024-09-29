@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useGeoLocationData } from "./hooks.tsx";
 import './LandingPage.scss';
 import headerImage from '../images/pattern-bg-desktop.png';
@@ -14,8 +14,6 @@ const LandingPage = () => {
 
     const handleSearch = (event) => {
         event.preventDefault();
-        const formData = new FormData(event.target);
-        // const ipAddress = formData.get('ipAddress') as string;
         const ipAddress = inputRef.current?.value;
         setSearchValue(ipAddress as string);
         if (inputRef.current)

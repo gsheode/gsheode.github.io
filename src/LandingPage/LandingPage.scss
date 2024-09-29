@@ -43,7 +43,10 @@
         color: black;
     }
 
+
 }
+
+
 
 .information-banner-container {
     padding: 2rem;
@@ -89,4 +92,28 @@
 #map {
     height: 180px;
     position: relative;
+}
+
+@media (max-width:600px) {
+    .input-field {
+        width: 20rem;
+    }
+
+    .information-banner-container {
+        display: flex;
+        flex-direction: column;
+        width: 16rem;
+        left: 12%;
+        top: 65%;
+    }
+
+    .information-banner-column {
+        border: none;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .information-banner-column:last-child {
+        padding-bottom: 0;
+    }
 }
