@@ -17,7 +17,6 @@ const LeafletMap = ({ data }) => {
         iconSize: [30],
     });
 
-
     return (<>
         {data && (<MapContainer center={position} zoom={13} ref={mapRef} style={{ height: "100vh", width: "100vw", zIndex: "0" }}>
             <TileLayer
