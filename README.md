@@ -1,4 +1,4 @@
-# Senior Software Engineer Portfolio
+# Software Engineer Portfolio
 
 A responsive personal portfolio built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
 

@@ -1,4 +1,4 @@
-- Build a responsive React and TypeScript portfolio for a senior software engineer.
+- Build a responsive React and TypeScript portfolio for a  software engineer.
 - Use Tailwind CSS 4 and Framer Motion.
 - Keep personal identity, project URLs, email, LinkedIn, and experience content replaceable with clear placeholder values.
 - Preserve GitHub Pages base-path configuration in vite.config.ts.
