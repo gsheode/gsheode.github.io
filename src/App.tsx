@@ -56,7 +56,7 @@ const skills = [
 const experience = [
   {
     years: 'Mar 2026 – Present',
-    role: 'Senior Software Engineer',
+    role: 'Software Engineer',
     company: 'Clarity (formerly Hiive) · Vancouver, BC',
     detail:
       'Shaping frontend architecture for a customer-facing trading platform and owning Elixir/GraphQL and Next.js/React features from concept to launch. Improved Apollo Client caching and removed stale portfolio data while reducing unnecessary GraphQL requests.',
@@ -150,7 +150,7 @@ function App() {
               transition={{ duration: 0.5 }}
               className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-cyan-400"
             >
-              <span className="h-px w-10 bg-cyan-400" /> Senior Software Engineer
+              <span className="h-px w-10 bg-cyan-400" /> Software Engineer
             </motion.p>
             <motion.h1
               variants={reveal}
@@ -204,7 +204,7 @@ function App() {
             </div>
             <div className="space-y-5 text-lg leading-8 text-slate-300">
               <p>
-                I’m a product-minded Senior Software Engineer based in Vancouver,
+                I’m a product-minded Software Engineer based in Vancouver,
                 BC, with experience across React, Next.js, Elixir, Ruby on Rails,
                 GraphQL, and ASP.NET.
               </p>
