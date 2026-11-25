@@ -341,7 +341,7 @@ function App() {
               Let’s build something meaningful.
             </h2>
             <p className="mx-auto mt-5 max-w-xl leading-7 text-slate-300">
-              Vancouver, BC · +1 (236) 983 4414
+              Vancouver, BC
             </p>
             <a className="primary-button mt-8" href="mailto:gandhali.p.sheode@gmail.com">
               gandhali.p.sheode@gmail.com <span aria-hidden="true">↗</span>
